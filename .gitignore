@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/todo-react/node_modules
+/todo-react/.pnp
+/todo-react/.pnp.js
+
+# testing
+/todo-react/coverage
+
+# production
+/todo-react/build
+
+# misc
+/todo-react/.DS_Store
+/todo-react/.env.local
+/todo-react/.env.development.local
+/todo-react/.env.test.local
+/todo-react/.env.production.local
+
+/todo-react/npm-debug.log*
+/todo-react/yarn-debug.log*
+/todo-react/yarn-error.log*

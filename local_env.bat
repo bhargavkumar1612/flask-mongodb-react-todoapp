@@ -1,0 +1,4 @@
+SET DB_URL=mongodb://localhost
+SET DB_USERNAME=admin
+SET DB_PASSWORD=password
+SET DB_PORT=27017

@@ -1,0 +1,32 @@
+.bg-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 70%;
+}
+.todo-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.input-container{
+    display: flex;
+}
+input{
+    margin-left: 20px;
+}
+
+#root{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}

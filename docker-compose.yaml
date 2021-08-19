@@ -1,0 +1,8 @@
+services:
+  todo_flask_api_service:
+    build: ./todo_flask
+    container_name: todo_flask_api_service
+    ports: 
+      - 5007:5007
+    env_file: 
+      - ./server.env
