@@ -1,7 +1,6 @@
 .todo-item{
     display: flex;
     align-items: center;
-    width: 70%;
 }
 .todo-desc{
     margin-left: 20px;
