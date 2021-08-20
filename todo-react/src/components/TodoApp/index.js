@@ -45,8 +45,16 @@ class TodoApp extends Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(task)
         }
-        console.log( JSON.stringify(task))
         await fetch(baseUrl+`my-tasks`,requestOptions)
+        this.fetchTodos()
+    }
+
+    onClickDelete = async (id)=>{
+        const requestOptions = {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+        }
+        await fetch(baseUrl+`my-task/${id}`,requestOptions)
         this.fetchTodos()
     }
 
@@ -58,8 +66,15 @@ class TodoApp extends Component {
         const {todos} = this.state
         return <div className="bg-container">
             <div className="inner-container">
+                <div className="header-container">
+                    <h1>Todo App</h1>
+                </div>
                 <div className="todo-container">
-                    {todos.map(todo=><TodoItem todoItem={todo} key={todo.id} onClickCheckbox={this.onClickCheckbox}/>)}
+                    {todos.map(todo=><TodoItem todoItem={todo} 
+                                               key={todo.id} 
+                                               onClickCheckbox={this.onClickCheckbox}
+                                               onClickDelete={this.onClickDelete}
+                                    />)}
                 </div>
                 <div className="input-container">
                     <form onSubmit={this.onSubmitNewTask}>
