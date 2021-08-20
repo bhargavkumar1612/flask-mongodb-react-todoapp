@@ -21,3 +21,5 @@
 /todo-react/npm-debug.log*
 /todo-react/yarn-debug.log*
 /todo-react/yarn-error.log*
+
+*__pycache__
