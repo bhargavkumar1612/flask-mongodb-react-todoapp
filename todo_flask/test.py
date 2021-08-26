@@ -18,14 +18,14 @@ class api_test(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test3_get_task_with_id(self):
-        response = requests.get(self.URL+"my-task/1")
+        response = requests.get(self.URL+"my-task/611f84521fccef1dcffd4444")
         self.assertEqual(response.status_code, 200)
-        self.assertDictEqual(response.json(),{"id": 1,
+        self.assertDictEqual(response.json(),{"id": "611f84521fccef1dcffd4444",
                                             "task": "Do the Todo-app",
                                             "status": False})
 
     def test4_update_product(self):
-        response = requests.put(self.URL+"my-task/1", json={"id": 1,
+        response = requests.put(self.URL+"my-task/1", json={"id": "611f84521fccef1dcffd4994",
                                                             "task": "Do the Todo-app",
                                                             "status": True})
         self.assertEqual(response.status_code, 200)
@@ -38,13 +38,13 @@ class api_test(unittest.TestCase):
 
 if __name__ == '__main__':
     t = api_test()
-    # t.test1_add_task()
-    # print(True)
-    # t.test2_get_all_tasks()
-    # print(True)
-    # t.test3_get_task_with_id()
-    # print(True)
-    # t.test4_update_product()
-    # print(True)
+    t.test1_add_task()
+    print(True)
+    t.test2_get_all_tasks()
+    print(True)
+    t.test3_get_task_with_id()
+    print(True)
+    t.test4_update_product()
+    print(True)
     t.test5_delete_a_task_with_id()
     print(True)
